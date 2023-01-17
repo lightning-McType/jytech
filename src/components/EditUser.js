@@ -192,6 +192,17 @@ function EditUser() {
               rows="4"
             ></textarea>
           </div>
+          {
+            <div
+              style={{
+                display: "flex",
+                width: 389.6,
+                justifyContent: "flex-end",
+              }}
+            >
+              {formik.values.about.length}/100
+            </div>
+          }
           {formik.touched.about && formik.errors.about ? (
             <div className="error">{formik.errors.about}</div>
           ) : null}
